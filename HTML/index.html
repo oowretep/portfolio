@@ -1,29 +1,42 @@
 ﻿<!DOCTYPE html>
 <html lang="en-US" class="no-js">
 	<head>
-		<!-- ============================================== Title and Meta Tags =============================================== -->
+		<!-- ==============================================Title and Meta Tags=============================================== -->
 		<meta charset="utf-8">
-		<title>DesignR | Personal Portfolio</title>
+		<title>Peter Woo Portfolio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<!-- ============================================== Favicons =============================================== -->
+		<!-- ==============================================Favicons=============================================== -->
 		<link rel="shortcut icon" href="assets/favicon.ico">
 		<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="assets/apple-touch-icon-72x72.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114.png">
 		
-		<!-- ============================================== CSS =============================================== -->    
+		<!-- ==============================================CSS=============================================== -->    
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/flexslider.css">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/designr-theme-cyan.css">
+		<link rel="stylesheet" href="css/main.css"> <!-- change CSS here -->
 		
-		<!-- ============================================== Fonts =============================================== -->
+		<!-- ==============================================Fonts=============================================== -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900' rel='stylesheet' type='text/css'>
 		
-		<!-- ============================================== JS =============================================== -->
-			
+		<!-- ==============================================JS=============================================== -->
+		<!-- ==============================================SCRIPTS=============================================== -->	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>
+		
+		<script src="js/libs/bootstrap.min.js"></script>
+		<script src='js/jquery.scrollto.js'></script>
+		<script src='js/jquery.flexslider.min.js'></script>
+		<script src='js/twitterFetcher_min.js'></script>
+		<script src='js/jquery.masonry.min.js'></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/jquery.easypiechart.min.js"></script>
+		<script src="js/jquery.backstretch.min.js"></script>
+		<script src="js/contact.js"></script>
+		<script src="js/designr.js"></script>
 		<!--[if lt IE 9]>
 			<script src="js/respond.min.js"></script>
 		<![endif]-->
@@ -35,7 +48,7 @@
 		<!--=== PAGE PRELOADER ===-->
 		<div id="page-loader"><span class="page-loader-gif"></span></div>
 
-		<!-- ============================================== MAIN NAV =============================================== -->
+		<!-- ==============================================MAIN NAV=============================================== -->
 		<div id="main-nav" class="navbar navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -43,7 +56,7 @@
 						<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 					</button>
 					<!-- ======= LOGO ========-->
-					<a class="navbar-brand scrollto" href="#home">JOHN DOE<br><span>UI Designer</span></a>
+					<a class="navbar-brand scrollto" href="#home">Peter Woo<br><span>Front End Developer</span></a>
 					<!-- <a class="navbar-brand scrollto ir-logo" href="#">JOHN DOE<br><span>UI Designer</span></a> -->
 				</div>
 				
@@ -53,45 +66,46 @@
 							<a href="#home" class="scrollto">Home</a>
 						</li>
 						<li>
-							<a href="#services" class="scrollto">What I do</a>
+							<a href="#services" class="scrollto">Skills</a>
 						</li>
 						<li>
-							<a href="#about" class="scrollto">About Me</a>
+							<a href="#about" class="scrollto">About</a>
 						</li>
 						<li>
-							<a href="#portfolio" class="scrollto">My Works</a>
+							<a href="#portfolio" class="scrollto">Applications</a>
 						</li>
 						<li>
-							<a href="#contact" class="scrollto">Contact Me</a>
+							<a href="#contact" class="scrollto">Contact</a>
 						</li>
 					</ul>
 				</div><!--End navbar-collapse -->
 			</div><!--End container -->
 		</div><!--End main-nav -->
 
-		<!-- ============================================== HEADER =============================================== -->
+																<!-- ********** INSTEAD OF THIS HEADER, CHANGE TO ANIMATED TYPING BACKGROUND ********** -->
+		<!-- ==============================================HEADER=============================================== -->
 		<header id="home" class="jumbotron">
 			<div class="container">
 				<div class="message-box clearfix">
 					<div class="left-col">
-						<p>I AM <span>JOHN DOE</span><br/>and I'm a web</p>
+						<p>I AM <span>Peter Woo</span><br/>and I'm a web</p>
 					</div>	
 					
 					<div class="right-col flexslider home-slider" style="z-index:1;">
 						<ul class="slides">
 							<li><p>Designer</p></li>
 							<li><p>Developer</p></li>
-							<li><p>Expert</p></li>
+							<li><p>Enthusiast</p></li>
 						</ul>
 					</div><!--End home-slider -->
 				</div><!--End message-box -->
 			</div><!--End container -->	
 		</header><!--End header -->
 
-		<!-- ============================================== SERVICES =============================================== -->
+		<!-- ==============================================SKILLS=============================================== -->
 		<section id="services">
 			<div class="container">
-				<h1 class="section-title scrollimation scale-in">The <span>Services</span> I offer<i class="fa fa-wrench"></i></h1>
+				<h1 class="section-title scrollimation scale-in"><span>Skills</span><i class="fa fa-code"></i></h1>
 				<div class="row services scrollimation fade-left">
 					<div class="col-md-3 text-center">
 						<a href="#service" class="icon"><i class="fa fa-flag"></i></a>
@@ -135,7 +149,7 @@
 			</div><!--End container -->
 		</section><!--End services section-->
 
-		<!-- ============================================== ABOUT =============================================== -->		
+		<!-- ==============================================ABOUT=============================================== -->		
 		<section id="about">
 			<div class="container">
 				<div class="row">
@@ -151,7 +165,7 @@
 			</div><!--End container -->
 		</section><!--End about section -->
 	
-		<!-- ============================================== SKILLS =============================================== -->			
+		<!-- ==============================================SKILLS=============================================== -->			
 		<section id="skills">
 			<div class="container">
 				<div class="row skills">
@@ -175,7 +189,7 @@
 			</div><!--End container -->
 		</section><!--End skills section -->
 	
-		<!-- ============================================== PORTFOLIO =============================================== -->		
+		<!-- ==============================================PORTFOLIO=============================================== -->		
 		<section  id="portfolio">
 			<div id="portfolio-header" class="text-center">
 				<h1 class="section-title scrollimation scale-in">The <span>works</span> I am proud of<i class="fa fa-pencil"></i></h1>
@@ -202,7 +216,7 @@
 			<div class="container masonry-wrapper scrollimation fade-in">
 				<div id="projects-container">
 				
-					<!-- ============================================== SINGLE PROJECT ITEM =============================================== -->	
+					<!-- ==============================================SINGLE PROJECT ITEM=============================================== -->	
 					<a class="project-item web-design" href="http://www.google.com" data-images="assets/projects/project-slide.jpg,assets/projects/project-slide.jpg,assets/projects/project-slide.jpg">
 						<img class="img-responsive project-image" src="assets/projects/project-thumb.jpg"  alt=""><!--Project thumb -->
 						<div class="hover-mask">
@@ -287,7 +301,7 @@
 				</div><!-- End projects --> 
 			</div><!-- End container --> 
 			
-			<!-- ============================================== PROJECT PREVIEW MODAL =============================================== -->	
+			<!-- ==============================================PROJECT PREVIEW MODAL=============================================== -->	
 			<div id="project-modal" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -311,7 +325,7 @@
 			</div><!-- End modal -->
 		</section><!-- End portfolio section -->
 		
-		<!-- ============================================== TWITTER FEED =============================================== -->	
+		<!-- ==============================================TWITTER FEED=============================================== -->	
 		<!-- <section id="twitter">
 			<div class="container">
 				<div class="row scrollimation fade-in">
@@ -325,7 +339,7 @@
 			</div>End container
 		</section>End Twitter section -->
 
-		<!-- ============================================== CONTACT =============================================== -->	
+		<!-- ==============================================CONTACT=============================================== -->	
 		<section  id="contact">
 			<div class="container">
 				<h1 class="section-title scrollimation scale-in">Keep in <span>Touch</span> with me</h1>
@@ -379,7 +393,7 @@
 			</div><!-- End container -->
 		</section><!-- End contact section -->
 		
-		<!-- ============================================== FOOTER =============================================== -->	
+		<!-- ==============================================FOOTER=============================================== -->	
 		<footer id="main-footer">
 			<div class="container">
 				<div class="row">
@@ -401,21 +415,6 @@
 				</div><!-- End row -->
 			</div><!-- End container -->
 		</footer><!-- End footer -->
-
-		<!-- ============================================== SCRIPTS =============================================== -->	
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>
-		
-		<script src="js/libs/bootstrap.min.js"></script>
-		<script src='js/jquery.scrollto.js'></script>
-		<script src='js/jquery.flexslider.min.js'></script>
-		<script src='js/twitterFetcher_min.js'></script>
-		<script src='js/jquery.masonry.min.js'></script>
-		<script src="js/waypoints.min.js"></script>
-		<script src="js/jquery.easypiechart.min.js"></script>
-		<script src="js/jquery.backstretch.min.js"></script>
-		<script src="js/contact.js"></script>
-		<script src="js/designr.js"></script>
 	</body>
 	
 </html>

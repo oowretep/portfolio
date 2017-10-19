@@ -1,6 +1,4 @@
-/*----------------------
----Main Layout Styles---
-------------------------*/
+/*-------------------------Main Layout Styles---------------------------*/
 .img-center{
     margin:20px auto;
 }
@@ -27,9 +25,7 @@
     border-radius:0;
 }
 
-/*-----------------------
----- Preloader Styles ----
--------------------------*/
+/*--------------------------- Preloader Styles -----------------------------*/
 #page-loader{
 	position: fixed;
 	right:0;
@@ -51,9 +47,7 @@
 	background: url('../assets/preloader.gif') no-repeat;
 }
 
-/*---------------------------
----Main Typography Styles----
------------------------------*/
+/*------------------------------Main Typography Styles---------------------------------*/
 
 body{
 	font-family: Lato, sans-serif;
@@ -141,9 +135,7 @@ a:focus,
   outline: none;
 }
 
-/*----------------------
----Main Color Styles----
-------------------------*/
+/*-------------------------Main Color Styles----------------------------*/
 body {
 	color:#999;
 	overflow-x:hidden;
@@ -207,9 +199,7 @@ body {
 	opacity:1;
 }
 
-/*----------------------
-----Navigation Styles---
-------------------------*/
+/*--------------------------Navigation Styles---------------------------*/
 
 .navbar-brand,
 .navbar-brand:hover,
@@ -336,9 +326,7 @@ body {
 	margin-left:-15px;
 }
 
-/*----------------------
------Header Styles------
-------------------------*/
+/*---------------------------Header Styles------------------------------*/
 
 .jumbotron {
     background:transparent;
@@ -418,9 +406,7 @@ header.jumbotron{
 .jumbotron .home-slider .slides li.clone {
     opacity:1;
 }
-/*------------------------
------Services Styles------
-------------------------*/
+/*-----------------------------Services Styles------------------------------*/
 
 #services{
     background:#fff;
@@ -526,9 +512,7 @@ header.jumbotron{
     margin-top:48px;
 }
 
-/*-----------------------
-------About Styles-------
-------------------------*/
+/*-----------------------------About Styles-------------------------------*/
 
 #about {
     background:#74C7D5;
@@ -566,9 +550,7 @@ header.jumbotron{
                 -12px 0px 0px 12px rgba(255,255,255,0.2);
 }
 
-/*-----------------------
-------Skills Styles-------
-------------------------*/
+/*-----------------------------Skills Styles-------------------------------*/
 
 #skills {
     padding-top:80px;
@@ -618,9 +600,7 @@ header.jumbotron{
 }
 
 
-/*----------------------
------Portfolio Styles---
-------------------------*/
+/*---------------------------Portfolio Styles---------------------------*/
 
 #portfolio {
     background:#fff;
@@ -846,9 +826,7 @@ header.jumbotron{
           transition-property: left, right, top, transform, opacity;
 }
 
-/*--------------------------
-----Project Modal Styles----
-----------------------------*/
+/*------------------------------Project Modal Styles--------------------------------*/
 
 .fade.modal {
 	overflow-x:hidden;
@@ -982,9 +960,7 @@ header.jumbotron{
     opacity:1;
 }
 
-/*----------------------
------Twitter Styles-----
-------------------------*/
+/*---------------------------Twitter Styles-----------------------------*/
 
 #twitter {
     color:#fff;
@@ -1089,9 +1065,7 @@ header.jumbotron{
     text-decoration:none;
 }
 
-/*----------------------
------Contact Styles-----
-------------------------*/
+/*---------------------------Contact Styles-----------------------------*/
 
 #contact {
     background:transparent;
@@ -1248,9 +1222,7 @@ header.jumbotron{
     font-weight:400;
 }
 
-/*----------------------
------Footer Styles-----
-------------------------*/
+/*---------------------------Footer Styles-----------------------------*/
 #main-footer {
     background:#fff;
     color:#74c7d5;
@@ -1343,9 +1315,7 @@ header.jumbotron{
 }
 
 
-/*------------------------
----Scrolling animations---
--------------------------*/
+/*---------------------------Scrolling animations----------------------------*/
 
 .scrollimation.fade-in{
 	opacity:0;
@@ -1465,9 +1435,7 @@ header.jumbotron{
 	transform:translateY(0px);
 }
 
-/*-----------------------
-------Media Queries------
-------------------------*/
+/*-----------------------------Media Queries------------------------------*/
 
 @media (max-width: 1199px) {
 
