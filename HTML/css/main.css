@@ -387,7 +387,7 @@ header.jumbotron {
 }
 
 .devicon {
-    /* display: none; */
+    display: none;
 }
 
 .details:nth-child(4) {
