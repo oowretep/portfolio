@@ -386,10 +386,6 @@ header.jumbotron {
     text-align: center;
 }
 
-.devicon {
-    display: none;
-}
-
 .details:nth-child(4) {
     border-right: 2px solid black;
 }
@@ -427,7 +423,7 @@ header.jumbotron {
 #skills .line .spot {
     margin:-7px auto;
     display:block;
-    width:200px;
+    width:250px;
     height:20px;
     background:#74C7D5;
     border:5px solid #fff;
@@ -447,7 +443,7 @@ header.jumbotron {
     color:#ccc;
     background:none;
     border:10px solid #74C7D5;
-    border-radius:50%;
+    border-radius: 50%;
     z-index:1;
     -webkit-transition:color 0.2s ease-in;
     transition:color 0.2s ease-in;
