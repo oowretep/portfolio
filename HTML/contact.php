@@ -25,7 +25,7 @@ if(isset($_POST['submitted'])) {
 	} else {
 		$email = trim($_POST['email']);
 	}
-		
+	
 	// we need at least some content
 	if(trim($_POST['comments']) === '') {
 		$commentError = 'You forgot to enter a message!';

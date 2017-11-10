@@ -1,15 +1,11 @@
 $(document).ready(function() {
-	/*============================================
-	Page Preloader
-	==============================================*/
+	/*============================================Page Preloader==============================================*/
 	
 	$(window).load(function(){
 		$('#page-loader').fadeOut(500);
 	});	
 	
-	/*============================================
-	Navigation Functions
-	==============================================*/
+	/*============================================Navigation Functions==============================================*/
 	if ($(window).scrollTop()===0){
 		$('#main-nav').removeClass('scrolled');
 	}
@@ -26,9 +22,7 @@ $(document).ready(function() {
 		}
 	});
 
-	/*============================================
-	ScrollTo Links
-	==============================================*/
+	/*============================================ScrollTo Links==============================================*/
 	$('a.scrollto').click(function(e){
 		$('html,body').scrollTo(this.hash, this.hash, {gap:{y:-80}});
 		e.preventDefault();
@@ -38,9 +32,7 @@ $(document).ready(function() {
 		}
 	});
 
-	/*============================================
-	Header Functions
-	==============================================*/
+	/*============================================Header Functions==============================================*/
 	$('.jumbotron').height($(window).height()+50);
 	$('.message-box').css({'marginTop':$(window).height()*0.4});
 
@@ -54,9 +46,7 @@ $(document).ready(function() {
 		smoothHeight: false
 	});
 
-	/*============================================
-	Skills Functions
-	==============================================*/
+	/*============================================Skills Functions==============================================*/
 	var aboutColor = $('#about').css('backgroundColor');
 
 	$('#skills').waypoint(function(){
@@ -72,9 +62,7 @@ $(document).ready(function() {
 		});
 	},{offset:'80%'});
 	
-	/*============================================
-	Project thumbs - Masonry
-	==============================================*/
+	/*============================================Project thumbs - Masonry==============================================*/
 	$(window).load(function(){
 
 		$('#projects-container').css({visibility:'visible'});
@@ -92,9 +80,7 @@ $(document).ready(function() {
 		waypointsRefresh();
 	});
 
-	/*============================================
-	Filter Projects
-	==============================================*/
+	/*============================================Filter Projects==============================================*/
 	$('#filter-works a').click(function(e){
 		e.preventDefault();
 
@@ -118,9 +104,7 @@ $(document).ready(function() {
 		waypointsRefresh();
 	});
 
-	/*============================================
-	Project Preview
-	==============================================*/
+	/*============================================Project Preview==============================================*/
 	$('.project-item').click(function(e){
 		e.preventDefault();
 
@@ -170,59 +154,8 @@ $(document).ready(function() {
 			.flexslider('destroy');
 	});
 	
-	/*============================================
-	Twitter Functions
-	==============================================*/
-	var tweetsLength = $('#twitter-slider').data('tweets-length'),
-		widgetID = $('#twitter-slider').data('widget-id');
-	
-	var configTweets = {
-	  "id": widgetID,
-	  "domId": '',
-	  "maxTweets": tweetsLength,
-	  "enableLinks": true,
-	  "showUser": false,
-	  "showTime": true,
-	  "dateFunction": '',
-	  "showRetweet": false,
-	  "customCallback": handleTweets,
-	  "showInteraction": true
-	};
-	
-	twitterFetcher.fetch(configTweets);
 
-	function handleTweets(tweets){
-	
-		var x = tweets.length,
-			n = 0,
-			tweetsHtml = '<ul class="slides">';
-			
-		while(n < x) {
-			tweetsHtml += '<li>' + tweets[n] + '</li>';
-			n++;
-		}
-		
-		tweetsHtml += '</ul>';
-		$('#twitter-slider').html(tweetsHtml);
-		
-		$('.twitter_reply_icon').html("<i class='fa fa-reply'></i>");
-		$('.twitter_retweet_icon').html("<i class='fa fa-retweet'></i>");
-		$('.twitter_fav_icon').html("<i class='fa fa-heart'></i>");
-
-		$('#twitter-slider').flexslider({
-			prevText: '<i class="fa fa-angle-left"></i>',
-			nextText: '<i class="fa fa-angle-right"></i>',
-			slideshowSpeed: 5000,
-			useCSS: true,
-			controlNav: false, 
-			pauseOnAction: false, 
-			pauseOnHover: true,
-			smoothHeight: false
-		});
-	}
-	/*============================================
-	Resize Functions
-	==============================================*/
+	/*============================================Resize Functions==============================================*/
 	$(window).resize(function(){
 		$('.jumbotron').height($(window).height());
 		$('.message-box').css({'marginTop':$(window).height()*0.4});
@@ -230,9 +163,7 @@ $(document).ready(function() {
 		waypointsRefresh();
 	});
 	
-	/*============================================
-	Backstretch Images
-	==============================================*/
+	/*============================================Backstretch Images==============================================*/
 	$.backstretch('assets/header-bg.jpg');
 
 	$('body').append('<img class="preload-image" src="assets/contact-bg.jpg" style="display:none;"/>');
@@ -250,9 +181,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	/*============================================
-	Project Hover mask on IE
-	==============================================*/
+	/*============================================Project Hover mask on IE==============================================*/
 	$('.no-csstransitions .hover-mask').hover(
 		function() {
 			$( this ).stop(true,true).animate({opacity: 1});
@@ -261,32 +190,24 @@ $(document).ready(function() {
 		}
 	);
 	
-	/*============================================
-	Placeholder Detection
-	==============================================*/
+	/*============================================Placeholder Detection==============================================*/
 	if (!Modernizr.input.placeholder) {
 		$('#contact-form').addClass('no-placeholder');
 	}
 
-	/*============================================
-	Scrolling Animations
-	==============================================*/
+	/*============================================Scrolling Animations==============================================*/
 	$('.scrollimation').waypoint(function(){
 		$(this).toggleClass('in');
 	},{offset:'90%'});
 
-	/*============================================
-	Refresh scrollSpy function
-	==============================================*/
+	/*============================================Refresh scrollSpy function==============================================*/
 	function scrollSpyRefresh(){
 		setTimeout(function(){
 			$('body').scrollspy('refresh');
 		},1000);
 	}
 
-	/*============================================
-	Refresh waypoints function
-	==============================================*/
+	/*============================================Refresh waypoints function==============================================*/
 	function waypointsRefresh(){
 		setTimeout(function(){
 			$.waypoints('refresh');
