@@ -11,10 +11,7 @@
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
 		<!-- ==============================================Favicons=============================================== -->
-		<link rel="shortcut icon" href="assets/favicon.ico">
-		<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="assets/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114.png">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
 		
 		<!-- ==============================================CSS=============================================== -->    
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -107,6 +104,11 @@
 					</div><!--End home-slider -->
 				</div><!--End message-box -->
 			</div><!--End container -->	
+			<div>
+				<a href="#about" class="scrollto scroll-down">
+					<i class="fa fa-angle-down scroll-down-icon"></i>
+				</a>
+			</div>
 		</header><!--End header -->
 
 		<!-- ==============================================ABOUT=============================================== -->		
@@ -119,17 +121,17 @@
 					<div class="col-sm-6 col-sm-offset-1 scrollimation fade-left">
 						<h2>About Me</h2>
 						<p>
-							I am a <b>front end developer</b> residing in <a href="https://www.google.com/maps/place/Irvine,+CA" target="_blank">Irvine, California</a>.
 							All my life, I have always been driven towards <b>creativity</b>. At an early age I discovered my passion for creating with music producing.
+							I love the opportunity to think of a solution or feature thats "outside the box" and different, yet just affective as the normal.
 							It extended when a friend introduced me to web development, which combined my love of technology with the ability to create.
 						</p>
 						<p>
 							Wanting to dive deeper, I attended LearningFuze, an accelerated web development program, where I spent over 700 hours learning web development.
-							I have had the chance to work with a number of great developers and create many apps of my own, most notable being, Stubbies.
+							I had the chance to work with a number of great developers and create many apps of my own, most notable being, Stubbies.
 							Stubbies is an app that allows students studying the same subject, to connect with one another, creating events that allow other users to find and join.
 						</p>
 						<p>
-							I always look forward to working on new projects and meeting new people. Please call or email to discuss potential
+							I look forward to working in an environment that would allow my creativity to grow. Please call or email to discuss working together.
 						</p>
 					</div>
 					<div class="col-sm-12 scrollimation fade-right about-to-project">
@@ -297,7 +299,7 @@
 				<div class="row">
 					<div class="col-sm-5 contact-info scrollimation fade-right">
 						<p>Feel free to contact me or send me a message!</p>
-						<p>I am looking for opportunies in Orange County, Los Angeles, San Diego, New York and San Francisco areas.</p>
+						<p>I am looking for opportunies in Orange County, Los Angeles, San Diego and New York areas.</p>
 						<ul>
 							<li>
 								<i class="fa fa-map-marker pull-left"></i>
@@ -305,20 +307,20 @@
 								<p>Irvine, CA</p>
 							</li>
 							<li>
-								<i class="fa fa-envelope pull-left"></i>
+								<i class="fa fa-phone pull-left"></i>
 								<h3>Phone</h3>
-								<p></p>
+								<p><a class="phone"></a></p>
 							</li>
 							<li>
-								<i class="fa fa-user pull-left"></i>
+								<i class="fa fa-envelope pull-left"></i>
 								<h3>Email</h3>
-								<p></p>
+								<p><a class="email"></a></p>
 							</li>
 						</ul>
 					</div>
 				  
 					<form id="contact-form" class="col-sm-7 scrollimation fade-left" action="./php_mailer/mail_handler.php" method="post" novalidate>
-						<div class="form-group">
+						<div class="form-group -animated">
 						  <label class="control-label" for="contact-name">Name</label>
 						  <div class="controls">
 							<i class="fa fa-user"></i>
@@ -326,7 +328,7 @@
 						  </div>
 						</div><!-- End name input -->
 						
-						<div class="form-group">
+						<div class="form-group -animated">
 						  <label class="control-label" for="contact-mail">Email</label>
 						  <div class=" controls">
 							<i class="fa fa-envelope"></i>
@@ -334,7 +336,7 @@
 						  </div>
 						</div><!-- End email input -->
 						
-						<div class="form-group">
+						<div class="form-group -animated">
 						  <label class="control-label" for="contact-message">Message</label>
 							<div class="controls">
 								<i class="fa fa-comment"></i>
@@ -353,13 +355,18 @@
 		<footer id="main-footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 left-col footerContent">
-						<h1 class="small-logo">Peter Woo<br><span>Front End Developer</span></h1>
+					<div class="col-sm-12 footerContent">
+						<div class="small-logo col-sm-12">
+							<a href="#home" class="scrollto scroll-up">
+								<i class="fa fa-angle-up scroll-up-icon"></i>
+							</a>
+						</div>
 						<ul class="footer-nav">
 							<li><a href="https://github.com/oowretep" target="blank"><i class="fa fa-github fa-3x"></i><br>GitHub</a></li>
 							<li><a href="https://www.linkedin.com/in/oowretep/" target="blank"><i class="fa fa-linkedin-square fa-3x"></i><br>LinkedIn</a></li>
-							<li><i class="fa fa-file-text-o fa-3x"></i><br>Resume</li>
+							<li><a href="#home" target="blank"><i class="fa fa-file-text-o fa-3x"></i><br>Resume</a></li>
 						</ul>
+						<h5>©2018 | Peter Woo</h5>
 					</div>
 				</div><!-- End row -->
 			</div><!-- End container -->

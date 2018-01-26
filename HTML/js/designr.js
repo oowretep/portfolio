@@ -162,7 +162,6 @@ $(document).ready(function() {
 	}
 
 	/*============================================Particles==============================================*/
-
 	particlesJS('particles-js',
 	{
 		"particles": {

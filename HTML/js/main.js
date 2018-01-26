@@ -1,11 +1,9 @@
 $(document).ready(function() {
-    var email = 'filleremail@filler.filler';
-    var phone = '123-456-7890'
+    var email = '13woopeter@gmail.com';
+    var phone = '(714) 788-9553'
 
-    $('.phone').text(phone)
-    // .attr('href', 'tel:17147889553');
-    $('.email').text(email)
-    // .attr('href', 'mailto:'+email);
+    $('.phone').text(phone).attr('href', 'tel:17147889553');
+    $('.email').text(email).attr('href', 'mailto:'+email);
     $('.stubbies.live').click(stubbiesLive);
     $('.stubbies.code').click(stubbiesCode);
 });
