@@ -1,6 +1,24 @@
+/*--COLORS
+#a3a3a3 - gray/dark white
+#74c7d5 - teal/blue
+#545454 - lightgray/ light black
+--*/
+
 /*-------------------------Main Layout Styles---------------------------*/
+.mt-0 {
+    margin-top: 0!important;
+}
+
+.mb-0 {
+    margin-bottom: 0!important;
+}
+
 .img-center {
     margin:20px auto;
+}
+
+#main-nav {
+    width: 100vw;
 }
 
 #main-nav a.ir-logo {
@@ -48,14 +66,15 @@
 }
 
 /*------------------------------Main Typography Styles---------------------------------*/
-
 body {
-	font-family: Lato, sans-serif;
+    font-family: Lato, sans-serif;
+    color:#999;
+	overflow-x:hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Lato, sans-serif;
-	color:#74c7d5;
+	color:#a3a3a3;
 }
 
 h1 {
@@ -66,30 +85,17 @@ h1 {
     letter-spacing:0.02em;
 }
 
-h1.section-title {
+h2.section-title {
     position:relative;
     margin:0 0 124px;
-    font-size:48px;
+    font-size:24px;
     line-height:64px;
     font-weight:300;
     text-align:center;
-    color:#74c7d5;
+    color:#545454;
     z-index:1;
-}
-
-.section-title span {
-    font-size:150%;
-    font-weight:400;
-}
-
-.section-title [class*=fa] {
-    position:absolute;
-    top:-28px;
-    left:50%;
-    margin-left:-60px;
-    font-size:120px;
-    color:#eee;
-    z-index:-1;
+    letter-spacing: 20px;
+    text-decoration: underline;
 }
 
 h2 {
@@ -126,76 +132,18 @@ a:focus, .btn:focus {
   outline: none;
 }
 
-/*-------------------------Main Color Styles----------------------------*/
-body {
-	color:#999;
-	overflow-x:hidden;
-}
-
-#main-nav .navbar-toggle {
-    border:1px solid rgba(255,255,255,0.5);
-    border-radius:0;
-}
-
-#main-nav .icon-bar {
-    background:#fff;
-}
-
-.btn-theme {
-	color:#fff;
-	background-color:#74c7d5;
-	padding:15px 90px;
-	font-size:24px;
-	font-weight:300;
-	text-transform:uppercase;
-	border:none;
-	border-radius:0;
-	-webkit-transition:background-color 0.2s ease-out;
-	transition:background-color 0.2s ease-out;
-}
-
-.btn-theme:hover {
-	cursor:pointer;
-	color:#fff;
-	background-color:#90D2DD;
-}
-
-.btn-theme:active, .btn-theme:focus {
-	color:#fff;
-}
-
-
-.btn-theme [class*=fa] {
-    margin-right:10px;
-}
-
-
-.btn-theme.transparent {
-	color:#fff;
-	background-color:transparent;
-	padding:14px 35px;
-	border:2px solid #fff;
-	font-weight:400;
-	-webkit-transition:all 0.3s ease-out;
-	transition:all 0.3s ease-out;
-}
-
-.btn-theme.transparent:hover, .btn-theme.transparent:focus, .btn-theme.transparent:active {
-	color:#74C7D5;
-	background-color:#fff;
-	border:2px solid #fff;
-	opacity:1;
-}
-
 /*--------------------------Navigation Styles---------------------------*/
-
-.navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
+.navbar-brand {
     padding:0 10px;
     font-size:30px;
-    line-height:30px;
+    line-height:54px;
     font-weight:normal;
     height:auto;
-    color:#fff;
+    color:#a3a3a3;
+}
+
+.navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
+    color: #fff;
 }
 
 .navbar-brand span {
@@ -204,7 +152,11 @@ body {
 }
 
 #main-nav.scrolled .navbar-brand {
-    color:#74c7d5;
+    color:#a3a3a3;
+}
+
+#main-nav.scrolled .navbar-brand:hover {
+    color:black;
 }
 
 #main-nav {
@@ -220,36 +172,35 @@ body {
     border-bottom:1px solid #ddd;
 }
 
-#main-nav.scrolled .navbar-toggle {
-    color:#74c7d5;
-    border-color:#74c7d5;
-}
-
-#main-nav.scrolled .navbar-toggle .icon-bar {
-    background:#74c7d5;
-}
-
 #main-nav .container {
-    padding:30px 20px;
+    padding:20px 20px;
     -webkit-transition:padding 0.5s ease-out;
     transition:padding 0.5s ease-out;
 }
 
 #main-nav.scrolled .container {
-    padding:10px 20px;
+    padding:0 20px;
 }
 
-#main-nav .nav a, #main-nav .nav a:active, #main-nav .nav a:hover {
+#main-nav .nav a {
     padding:0px 10px;
     font-size:18px;
     line-height:54px;
     font-weight:400;
     background:transparent;
-    color:#fff;
+    color:rgb(213, 212, 212);
 }
 
-#main-nav.scrolled .nav a, #main-nav.scrolled .nav a:active, #main-nav.scrolled .nav a:hover {
-    color:#74c7d5;
+#main-nav .nav li.active a, #main-nav .nav a:active, #main-nav .nav a:hover {
+    color: #fff;
+}
+
+#main-nav.scrolled .nav li.active a, #main-nav.scrolled .nav a:active, #main-nav.scrolled .nav a:hover {
+    color: black;
+}
+
+#main-nav.scrolled .nav a {
+    color:#a3a3a3;
 }
 
 #main-nav li {
@@ -261,6 +212,16 @@ body {
 #main-nav .dropdown-menu a {
     font-size:14px;
 }
+
+#main-nav .navbar-toggle {
+    border:1px solid rgba(255,255,255,0.5);
+    border-radius:0;
+}
+
+#main-nav .icon-bar {
+    background:#fff;
+}
+
 
 /* Hover Effect */
 #main-nav .nav a {
@@ -291,8 +252,8 @@ body {
 }
 
 #main-nav.scrolled .nav a:hover:before, #main-nav.scrolled .nav li.active a:before {
-	color: #74c7d5;
-	text-shadow: 12px 0 #74c7d5, -12px 0 #74c7d5;
+	color: black;
+	text-shadow: 12px 0 black, -12px 0 black;
 }
 
 .no-textshadow #main-nav .nav a:before {
@@ -304,6 +265,10 @@ body {
 }
 
 /*---------------------------Header Styles------------------------------*/
+.home-particle {
+    height: 50%;
+}
+
 .jumbotron {
     background:transparent;
     color:#74c7d5;
@@ -320,10 +285,9 @@ header.jumbotron {
 }
 
 .jumbotron .message-box {
-    width:90%;
-    margin:300px auto 0;
-	background:#fff;
-    background:rgba(255,255,255,0.9);
+    color: white;
+    width:100%;
+    margin:0;
     padding:20px 0;
 }
 
@@ -355,6 +319,7 @@ header.jumbotron {
 .jumbotron .left-col p span {
     font-size:42px;
     font-weight:400;
+    letter-spacing: 10px;
 }
 
 .jumbotron .right-col p {
@@ -381,31 +346,118 @@ header.jumbotron {
     opacity:1;
 }
 
-/*-----------------------------Skills Styles------------------------------*/
-.details {
+/*-----------------------------About Styles-------------------------------*/
+#about {
+    background-color: white;
+    color:#545454;
+    padding:80px 0;
+}
+
+#about h2 {
+    letter-spacing: 20px;
     text-align: center;
 }
 
-.details:nth-child(4) {
-    border-right: 2px solid black;
+#about p {
+    font-size:16px;
+    line-height:36px;
+    font-weight:300;
+    margin-bottom:42px;
 }
 
-.details:nth-child(6) {
-    border-left: 2px solid black;
+#about a:hover {
+    text-decoration:underline;
 }
 
-.devicon ul {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
+.about-photo {
+    background: lightgray;
+    border-radius: 100px;
 }
 
-.devicon li {
-    color: lightgray;
-    list-style-type: none;
-    display: inline-block;
+#about img {
+    box-shadow:12px 0px 0px 12px rgba(255,255,255,0.2),
+                -12px 0px 0px 12px rgba(255,255,255,0.2);
+}
+
+.about-to-project {
+    text-align: center;
+}
+
+#about .btn-theme.transparent {
+    font-size:18px;
+    text-decoration:none;
+}
+
+.btn-theme.transparent {
+	color:#a3a3a3;
+	background-color:transparent;
+	padding:14px 35px;
+	border:2px solid #a3a3a3;
+	font-weight:400;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.btn-theme.transparent:hover, .btn-theme.transparent:focus, .btn-theme.transparent:active {
+	color:black;
+	background-color: transparent;
+	border:2px solid black;
+	opacity:1;
+}
+
+/*--General Button--*/
+.btn-theme {
+	color:#fff;
+	background-color:#74c7d5;
+	padding:15px 90px;
+	font-size:24px;
+	font-weight:300;
+	text-transform:uppercase;
+	border:none;
+	border-radius:0;
+	-webkit-transition:background-color 0.2s ease-out;
+	transition:background-color 0.2s ease-out;
+}
+
+.btn-theme:hover {
+	cursor:pointer;
+	color:#fff;
+	background-color:#90D2DD;
+}
+
+.btn-theme:active, .btn-theme:focus {
+	color:#fff;
+}
+
+.btn-theme [class*=fa] {
+    margin-right:10px;
+}
+
+/*-----------------------------Skills Styles------------------------------*/
+.devicon {
+    text-align: center;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.devicon div {
+    color: #a3a3a3;
     margin: auto;
+    width: 20%;
+    height: 10%;
+}
+
+.devicon div svg {
+    display: inline-block;
+    height: 25%;
+    width: 25%;
+    margin: auto;
+}
+
+.devicon div p {
+    width: 100%;
 }
 
 #skills {
@@ -500,6 +552,7 @@ header.jumbotron {
     margin-bottom:24px;
     font-size:24px;
     font-weight:400;
+    color: #545454
 }
 
 .skills p {
@@ -510,43 +563,6 @@ header.jumbotron {
 
 .skills.bottom-row p {
     margin-top:48px;
-}
-
-/*-----------------------------About Styles-------------------------------*/
-#about {
-    background:#74C7D5;
-    color:#fff;
-    padding:80px 0;
-}
-
-#about h1 {
-    color:#fff;
-    font-size:36px;
-    line-height:42px;
-    font-weight:300;
-    margin-bottom:24px;
-    position:relative;
-}
-
-#about p {
-    font-size:24px;
-    line-height:36px;
-    font-weight:300;
-    margin-bottom:42px;
-}
-
-#about a:hover {
-    text-decoration:underline;
-} 
-
-#about .btn-theme.transparent {
-    font-size:18px;
-    text-decoration:none;
-}
-
-#about img {
-    box-shadow:12px 0px 0px 12px rgba(255,255,255,0.2),
-                -12px 0px 0px 12px rgba(255,255,255,0.2);
 }
 
 /*-----------------------------other Styles-------------------------------*/
@@ -814,136 +830,6 @@ header.jumbotron {
       -ms-transition-property: left, right, top, -ms-transform, opacity;
        -o-transition-property: left, right, top, -o-transform, opacity;
           transition-property: left, right, top, transform, opacity;
-}
-
-/*------------------------------Project Modal Styles--------------------------------*/
-.fade.modal {
-	overflow-x:hidden;
-}
-
-.modal.fade .modal-dialog {
-	-webkit-transform: scale(0.7);
-	-moz-transform: scale(0.7);
-	-ms-transform: scale(0.7);
-	transform: scale(0.7);
-	opacity: 0;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.5s;
-}
-
-.modal.in .modal-dialog {
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	transform: scale(1);
-	opacity: 1;
-}
-
-.modal-backdrop {
-    background-color:#fff;
-}
-
-.modal-backdrop.in {
-    opacity:1;
-	filter:alpha(opacity=100);
-}
-
-.modal-dialog {
-    width:90%;
-    max-width:1140px;
-    padding-top:50px;
-}
-
-.modal-content {
-    border:none;
-    border-radius:0;
-    box-shadow:none;
-    background-color:#fff;
-}
-
-.modal-header {
-    height:60px;
-    border:none;
-    border-bottom:1px solid #74c7d5;
-    margin-bottom:10px;
-}
-
-.modal-header .close {
-    font-size:42px;
-    line-height:42px;
-    margin-top:0px;
-    -webkit-transition:all 0.2s ease-out;
-    transition:all 0.2s ease-out;
-}
-
-.modal-header .close:hover {
-    color:#74c7d5;
-    opacity:1;
-}
-
-.modal-body .left-col, .modal-body .right-col {
-    float:left;
-    padding:0;
-}
-
-.modal-body .left-col {
-	width:50%;
-	margin:0 50px 20px 0;
-	position:relative;
-}
-
-.modal-body .right-col {
-	width:50%;
-    padding:10px 60px 0;
-}
-
-.modal-body .left-col {
-    min-height:60px;
-    background:transparent;
-    z-index:1;
-}
-
-.modal-body h1 {
-    color:#74c7d5;
-    margin:200px 0 24px;
-    font-size:32px;
-}
-
-.modal-body .project-descr {
-    color:#aaa;
-    margin:0 0 24px;
-}
-
-.modal-body .btn-theme {
-    margin-top:48px;
-}
-
-.modal-body .loader {
-    position:absolute;
-    left:50%;
-    top:0;
-    margin-top:27%;
-    margin-left:-10px;
-    width:30px;
-    height:30px;
-    background:url('../assets/loader.gif') no-repeat 50% 50%;
-}
-
-.modal-body .image-wrapper {
-    position:absolute;
-    width:96%;
-    top:4%;
-    left:3%;
-    border:none;
-    z-index:-1;
-    opacity:0;
-    -webkit-transition:all 0.5s ease-out 0.7s;
-    transition:all 0.5s ease-out 0.7s;
-}
-
-.modal-body .image-wrapper.done {
-    opacity:1;
 }
 
 /*---------------------------Contact Styles-----------------------------*/
@@ -1318,6 +1204,7 @@ header.jumbotron {
 
     .jumbotron .left-col p span {
         font-size:36px;
+        letter-spacing: 10px;
     }
 
     .jumbotron .right-col p {
@@ -1352,7 +1239,11 @@ header.jumbotron {
 
 @media (max-width: 768px) {
     #main-nav .navbar-brand {
-        color:#74c7d5;
+        color:#a3a3a3;
+    }
+
+    #main-nav .navbar-brand:active {
+        color:black;
     }
 
     #main-nav {
@@ -1361,30 +1252,41 @@ header.jumbotron {
     }
 
     #main-nav .navbar-toggle {
-        color:#74c7d5;
-        border-color:#74c7d5;
+        color:#a3a3a3;
+        border-color:#a3a3a3;
     }
 
-    #main-nav .navbar-toggle .icon-bar {
-        background:#74c7d5;
+    #main-nav .navbar-toggle:focus, #main-nav .navbar-toggle:hover {
+        color: black;
+        border-color:black;
+    }
+
+    #main-nav.navbar-fixed-top .nav li.active a, #main-nav.navbar-fixed-top .nav a:active, #main-nav.navbar-fixed-top .nav a:hover {
+        color: black;
+    }
+
+    #main-nav .icon-bar {
+        background: black;
     }
 
     #main-nav .container {
         padding:10px 20px;
     }
 
-    #main-nav .nav a, #main-nav .nav a:active, #main-nav .nav a:hover {
-        color:#74c7d5;
+    #main-nav .nav a {
+        color:#a3a3a3;
+        line-height:42px;
+        text-align:center;
+    }
+
+    #main-nav .nav li.active a {
+        color:black;
         line-height:42px;
         text-align:center;
     }
 
     #main-nav .nav a:before {
         display:none;
-    }
-
-    #main-nav .nav a:hover, #main-nav .nav li.active a {
-        box-shadow:0 0 0 1px;
     }
 
     .jumbotron .left-col p {
@@ -1394,6 +1296,7 @@ header.jumbotron {
 
     .jumbotron .left-col p span {
         font-size:32px;
+        letter-spacing: 10px;
     }
 
     .jumbotron .right-col p {
@@ -1409,17 +1312,19 @@ header.jumbotron {
         text-align:center;
     }
 
-    .modal-dialog {
-        max-width:480px;
-    }
-
-    .modal-body .left-col, .modal-body .right-col {
-        width:100%;
-    }
-
-    h1.section-title {
-        font-size:42px;
+    h2.section-title {
+        font-size:36px;
         line-height:56px;
+        letter-spacing: 0;
+    }
+
+    .devicon {
+        height: 100vmin;
+    }
+
+    .devicon div {
+        width: 33%;
+        height: 24%;
     }
 }
 
@@ -1429,8 +1334,8 @@ header.jumbotron {
         line-height:38px;
     }
 
-    h1.section-title {
-        font-size:32px;
+    h2.section-title {
+        font-size:24px;
         line-height:46px;
     }
 
@@ -1445,13 +1350,8 @@ header.jumbotron {
         font-size:18px;
     }
 
-    #about h1 {
-        font-size:28px;
-        line-height:36px;
-    }
-
     #about p {
-        font-size:21px;
+        font-size:15px;
         line-height:28px;
     }
 

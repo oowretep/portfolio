@@ -34,7 +34,6 @@ $(document).ready(function() {
 
 	/*============================================Header Functions==============================================*/
 	$('.jumbotron').height($(window).height()+50);
-	$('.message-box').css({'marginTop':$(window).height()*0.4});
 
 	$('.home-slider').flexslider({
 		animation: "slide",
@@ -104,61 +103,9 @@ $(document).ready(function() {
 		waypointsRefresh();
 	});
 
-	/*============================================Project Preview==============================================*/
-	$('.project-item').click(function(e){
-		e.preventDefault();
-
-		var elem = $(this),
-			title = elem.find('.project-title').text(),
-			link = elem.attr('href'),
-			descr = elem.find('.project-description').html(),
-			slidesHtml = '<ul class="slides">',
-
-			slides = elem.data('images').split(',');
-
-		for (var i = 0; i < slides.length; ++i) {
-			slidesHtml = slidesHtml + '<li><img src='+slides[i]+' alt=""></li>';
-		}
-		
-		slidesHtml = slidesHtml + '</ul>';
-		
-
-		$('#project-modal').on('show.bs.modal', function () {
-			$(this).find('h1').text(title);
-			$(this).find('.btn').attr('href',link);
-			$(this).find('.project-descr').html(descr);
-			$(this).find('.image-wrapper').addClass('flexslider').html(slidesHtml);
-			
-			setTimeout(function(){
-				$('.image-wrapper.flexslider').flexslider({
-					slideshowSpeed: 3000,
-					animation: 'slide',
-					controlNav: false,
-					start: function(){
-						$('#project-modal .image-wrapper')
-						.addClass('done')
-						.prev('.loader').fadeOut();
-					}
-				});
-			},1000);
-		}).modal();
-		
-	});
-
-	$('#project-modal').on('hidden.bs.modal', function () {
-		$(this).find('.loader').show();
-		$(this).find('.image-wrapper')
-			.removeClass('flexslider')
-			.removeClass('done')
-			.html('')
-			.flexslider('destroy');
-	});
-	
-
 	/*============================================Resize Functions==============================================*/
 	$(window).resize(function(){
 		$('.jumbotron').height($(window).height());
-		$('.message-box').css({'marginTop':$(window).height()*0.4});
 		scrollSpyRefresh();
 		waypointsRefresh();
 	});
@@ -166,7 +113,7 @@ $(document).ready(function() {
 	/*============================================Backstretch Images==============================================*/
 	$.backstretch('assets/header-bg.jpg');
 
-	$('body').append('<img class="preload-image" src="assets/contact-bg.jpg" style="display:none;"/>');
+	// $('body').append('<img class="preload-image" src="assets/contact-bg.jpg" style="display:none;"/>');
 
 	$('#about').waypoint(function(direction){
 	
@@ -213,5 +160,120 @@ $(document).ready(function() {
 			$.waypoints('refresh');
 		},1000);
 	}
+
+	/*============================================Particles==============================================*/
+
+	particlesJS('particles-js',
+	{
+		"particles": {
+			"number": {
+				"value": 100,
+				"density": {
+					"enable": true,
+					"value_area": 800
+				}
+			},
+			"color": {
+				"value": "#ffffff"
+			},
+			"shape": {
+				"type": "circle",
+				"stroke": {
+					"width": 0,
+					"color": "#000000"
+				},
+				"polygon": {
+					"nb_sides": 5
+				},
+				"image": {
+					"src": "img/github.svg",
+					"width": 100,
+					"height": 100
+				}
+			},
+			"opacity": {
+				"value": 0.5,
+				"random": false,
+				"anim": {
+					"enable": false,
+					"speed": 1,
+					"opacity_min": 0.1,
+					"sync": false
+				}
+			},
+			"size": {
+				"value": 3,
+				"random": true,
+				"anim": {
+					"enable": false,
+					"speed": 40,
+					"size_min": 0.1,
+					"sync": false
+				}
+			},
+			"line_linked": {
+				"enable": true,
+				"distance": 150,
+				"color": "#ffffff",
+				"opacity": 0.4,
+				"width": 1
+			},
+			"move": {
+				"enable": true,
+				"speed": 6,
+				"direction": "none",
+				"random": false,
+				"straight": false,
+				"out_mode": "out",
+				"bounce": false,
+				"attract": {
+					"enable": false,
+					"rotateX": 600,
+					"rotateY": 1200
+				}
+			}
+		},
+		"interactivity": {
+			"detect_on": "canvas",
+			"events": {
+				"onhover": {
+					"enable": true,
+					"mode": "repulse"
+				},
+				"onclick": {
+					"enable": true,
+					"mode": "push"
+				},
+				"resize": true
+			},
+			"modes": {
+				"grab": {
+					"distance": 400,
+					"line_linked": {
+						"opacity": 1
+					}
+				},
+				"bubble": {
+					"distance": 400,
+					"size": 40,
+					"duration": 2,
+					"opacity": 8,
+					"speed": 3
+				},
+				"repulse": {
+					"distance": 200,
+					"duration": 0.4
+				},
+				"push": {
+					"particles_nb": 4
+				},
+				"remove": {
+					"particles_nb": 2
+				}
+			}
+		},
+		"retina_detect": true
+	})
+
 
 });	
