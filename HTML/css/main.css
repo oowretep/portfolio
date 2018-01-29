@@ -235,7 +235,7 @@ a:focus, .btn:focus {
 	bottom:-5px;
 	left: 50%;
 	color: transparent;
-	content: '•';
+	content: '/';
 	text-shadow: 0 0 transparent;
 	font-size: 16px;
 	line-height:21px;
@@ -259,7 +259,7 @@ a:focus, .btn:focus {
 }
 
 .no-textshadow #main-nav .nav a:before {
-	content: '• • •';
+	content: '\ | /';
 }
 
 .no-csstransforms #main-nav .nav a:before {
