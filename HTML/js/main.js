@@ -26,7 +26,7 @@ function stubbiesCode() {
 }
 
 function ticTacLive() {
-    window.open('https://www.google.com');
+    window.open('http://www.oowretep.com/tictacduckhunt');
 }
 
 function ticTacCode() {
@@ -34,7 +34,7 @@ function ticTacCode() {
 }
 
 function fridgeBridgeLive() {
-    window.open('https://www.google.com');
+    window.open('http://www.oowretep.com/fridgebridge');
 }
 
 function FridgeBridgeCode() {
