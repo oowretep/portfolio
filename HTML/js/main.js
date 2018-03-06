@@ -18,11 +18,11 @@ function resumeLink() {
 }
 
 function stubbiesLive() {
-    window.open('https://www.google.com');
+    window.open('http://stubbies.kryseno.com/');
 }
 
 function stubbiesCode() {
-    window.open('https://www.github.com/oowretep');
+    window.open('https://github.com/kryseno/stubbies');
 }
 
 function ticTacLive() {

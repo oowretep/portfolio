@@ -635,6 +635,11 @@ header.jumbotron {
     color: #a3a3a3;
 }
 
+.stubbies-img, .tictac-img, .fridgebridge-img {
+    height: 175px;
+    width: 375px;
+}
+
 .project-item .hover-mask .live {
     padding-right: 20%;
 }
