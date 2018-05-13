@@ -96,7 +96,38 @@ h2.section-title {
     color:#545454;
     z-index:1;
     letter-spacing: 20px;
-    text-decoration: underline;
+}
+
+h2.ribbon-title:before, 
+h2.ribbon-title:after {
+    top: 5px;
+    z-index: -100;
+    content: '';
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 0;
+    position: relative;
+}
+
+h2.ribbon-title:before {
+    border-color: #545454 #545454 #545454 transparent;
+    left: -40px;
+    border-width: 25px;
+}
+
+h2.ribbon-title:after {
+    border-color: #545454 transparent #545454 #545454;
+    right: -40px;
+    border-width: 25px;
+}
+
+h2.ribbon-title.contact-title:before {
+    border-color: whitesmoke whitesmoke whitesmoke transparent;
+}
+
+h2.ribbon-title.contact-title:after {
+    border-color: whitesmoke transparent whitesmoke whitesmoke;
 }
 
 h2 {
@@ -411,14 +442,62 @@ header.jumbotron {
     text-decoration:underline;
 }
 
-.about-photo {
-    background: lightgray;
-    border-radius: 100px;
-}
-
 #about img {
     box-shadow:12px 0px 0px 12px rgba(255,255,255,0.2),
                 -12px 0px 0px 12px rgba(255,255,255,0.2);
+}
+
+.about-photo {
+    position: relative;  
+    display: table;
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+.about-photo img {
+    display: table-cell;
+    max-width:100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 8px;
+    background: #fff;
+    box-shadow: 0 0 2px #666;
+    box-sizing: border-box;
+}
+
+.about-photo:before,
+.about-photo:after,
+.about-ab:before,
+.about-ab:after {
+    position: absolute;
+    bottom: -20px;
+    right: -40px;
+    content: "";
+    height: 40px;
+    width: 80px;
+    background: #fff; /* Same color that wrapper background */
+    box-shadow: 0 -6px 9px -8px #333;
+    transform: rotate(-45deg);
+}
+
+.about-photo:after,
+.about-ab:after {
+    top: -14px;
+    left: -20px;
+    box-shadow: 0 6px 9px -8px #333;
+}
+
+.about-ab:before { 
+    top: auto;
+    left: -40px;
+    transform: rotate(45deg);
+}
+
+.about-ab:after {
+    left: auto;
+    top: -11px;
+    right: -20px;
+    transform: rotate(45deg);
 }
 
 .about-to-project {
