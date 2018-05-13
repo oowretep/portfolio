@@ -113,13 +113,13 @@ h2.ribbon-title:after {
 h2.ribbon-title:before {
     border-color: #545454 #545454 #545454 transparent;
     left: -40px;
-    border-width: 25px;
+    border-width: 20px;
 }
 
 h2.ribbon-title:after {
     border-color: #545454 transparent #545454 #545454;
     right: -40px;
-    border-width: 25px;
+    border-width: 20px;
 }
 
 h2.ribbon-title.contact-title:before {
@@ -489,7 +489,8 @@ header.jumbotron {
 
 .about-ab:before { 
     top: auto;
-    left: -40px;
+    left: -21px;
+    bottom: -15px;
     transform: rotate(45deg);
 }
 
@@ -498,6 +499,11 @@ header.jumbotron {
     top: -11px;
     right: -20px;
     transform: rotate(45deg);
+}
+
+.about-photo:before {
+    bottom: -13px;
+    right: -21px;
 }
 
 .about-to-project {
@@ -1265,6 +1271,10 @@ header.jumbotron {
     h2.section-title {
         font-size:36px;
         line-height:56px;
+        letter-spacing: 0;
+    }
+
+    #about h2 {
         letter-spacing: 0;
     }
 
