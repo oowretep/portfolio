@@ -11,6 +11,8 @@ $(document).ready(function() {
     $('.ticTac.code').click(ticTacCode);
     $('.fridgeBridge.live').click(fridgeBridgeLive);
     $('.fridgeBridge.code').click(FridgeBridgeCode);
+
+    $('.toggleWrapper').unbind('click').click(colorSchemeChange);
 });
 
 function resumeLink() {
@@ -39,4 +41,24 @@ function fridgeBridgeLive() {
 
 function FridgeBridgeCode() {
     window.open('https://github.com/oowretep/Fridge-Bridge');
+}
+
+var check = false;
+
+function colorSchemeChange() {
+    if ($('.inputCheck').is(':checked')) {
+        if (check === true) {
+            return;
+        }
+        var path = 'css/light.css'
+        $('#color-switcher').attr('href', path);
+        check = true;
+    } else if ($('.inputCheck').not(':checked')) {
+        if (check === false) {
+            return;
+        }
+        var path = 'css/dark.css'
+        $('#color-switcher').attr('href', path);
+        check = false;
+    }
 }
