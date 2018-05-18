@@ -423,6 +423,17 @@ input:checked + .toggle .star--6 {
     background:#fff;
 }
 
+#main-nav.scrolled .toggle:before {
+    color: #000;
+}
+
+#main-nav.scrolled input:checked + .toggle:after {
+    color: #000;
+}
+
+#main-nav.scrolled input:checked + .toggle:before {
+    color: #a3a3a3;
+}
 
 /* Hover Effect */
 #main-nav .nav a {
@@ -855,7 +866,7 @@ header.jumbotron {
     background:rgba(60, 72, 72, 0.9);
 }
 
-.project-item .hover-mask:hover, .project-item .hover-mask:active, .project-item .hover-mask:focus {
+.project-item .hover-mask:hover, .project-item .hover-mask:active, .project-item .hover-mask:focus, .project-item .hover-mask:focus-within {
     opacity: 1;
     padding:15px;
 }
