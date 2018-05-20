@@ -13,6 +13,10 @@ $(document).ready(function() {
     $('.fridgeBridge.code').click(FridgeBridgeCode);
 
     $('.toggleWrapper').unbind('click').click(colorSchemeChange);
+
+    $('.inputCheck').prop('checked', true);
+    var path = 'css/dark.css'
+    $('#color-switcher').attr('href', path);
 });
 
 function resumeLink() {
@@ -50,14 +54,14 @@ function colorSchemeChange() {
         if (check === true) {
             return;
         }
-        var path = 'css/light.css'
+        var path = 'css/dark.css'
         $('#color-switcher').attr('href', path);
         check = true;
     } else if ($('.inputCheck').not(':checked')) {
         if (check === false) {
             return;
         }
-        var path = 'css/dark.css'
+        var path = 'css/light.css'
         $('#color-switcher').attr('href', path);
         check = false;
     }
